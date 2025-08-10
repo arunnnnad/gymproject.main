@@ -15,4 +15,4 @@ A web-based application to manage gym operations, including member records, paym
 ## Setup
 1. Clone the repo:
    ```bash
-   git clone 
+   git clone https://github.com/arunnnnad/gymproject.main
