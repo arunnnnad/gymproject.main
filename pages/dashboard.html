@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - FitHub Gym Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="icon"><i class="fas fa-dumbbell"></i></span>
+                    <h2>FitHub</h2>
+                </div>
+                <span class="mobile-toggle" id="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </div>
+            
+            <div class="sidebar-content">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img id="user-avatar" src="https://via.placeholder.com/100" alt="Admin Avatar">
+                    </div>
+                    <div class="user-details">
+                        <h3 id="admin-name">Admin Name</h3>
+                        <p>Administrator</p>
+                    </div>
+                </div>
+                
+                <nav class="sidebar-menu">
+                    <ul>
+                        <li class="active">
+                            <a href="#dashboard" data-section="dashboard">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#members" data-section="members">
+                                <i class="fas fa-users"></i>
+                                <span>Members</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#payments" data-section="payments">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Payments</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#notifications" data-section="notifications">
+                                <i class="fas fa-bell"></i>
+                                <span>Notifications</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#supplements" data-section="supplements">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Supplement Store</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#diet" data-section="diet">
+                                <i class="fas fa-apple-alt"></i>
+                                <span>Diet Plans</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#reports" data-section="reports">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Reports</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#settings" data-section="settings">
+                                <i class="fas fa-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="sidebar-footer">
+                <button id="logout-btn" class="btn logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="header-left">
+                    <button id="menu-toggle" class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="page-title">Dashboard</h1>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">3</span>
+                        <div class="notification-dropdown">
+                            <div class="notification-header">
+                                <h3>Notifications</h3>
+                                <a href="#" class="mark-all-read">Mark all as read</a>
+                            </div>
+                            <ul class="notification-list">
+                                <li class="unread">
+                                    <div class="notification-icon"><i class="fas fa-user-plus"></i></div>
+                                    <div class="notification-content">
+                                        <p>New member registration: <strong>Rahul Kumar</strong></p>
+                                        <span class="notification-time">2 minutes ago</span>
+                                    </div>
+                                </li>
+                                <li class="unread">
+                                    <div class="notification-icon"><i class="fas fa-credit-card"></i></div>
+                                    <div class="notification-content">
+                                        <p>Payment received from <strong>Rishita Kanwar</strong></p>
+                                        <span class="notification-time">1 hour ago</span>
+                                    </div>
+                                </li>
+                                <li class="unread">
+                                    <div class="notification-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                                    <div class="notification-content">
+                                        <p>5 membership plans expiring soon</p>
+                                        <span class="notification-time">3 hours ago</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="view-all">
+                                <a href="#notifications">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="user-profile">
+                        <img id="header-avatar" src="https://via.placeholder.com/40" alt="Admin Avatar">
+                        <div class="user-dropdown">
+                            <div class="dropdown-header">
+                                <img src="https://via.placeholder.com/60" alt="Admin Avatar">
+                                <div>
+                                    <h4 id="dropdown-admin-name">Admin Name</h4>
+                                    <p>Administrator</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a href="#"><i class="fas fa-user"></i> My Profile</a></li>
+                                <li><a href="#"><i class="fas fa-cog"></i> Account Settings</a></li>
+                                <li><a href="#" id="header-logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content-wrapper">
+                <!-- Dashboard Section -->
+                <section id="dashboard-section" class="content-section active">
+                    <div class="section-header">
+                        <h2>Admin Dashboard</h2>
+                        <p>Welcome to your control center. Manage all aspects of your gym from here.</p>
+                    </div>
+                    
+                    <div class="stats-cards">
+                        <div class="stat-card">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-card-info">
+                                <h3>Total Members</h3>
+                                <p class="stat-value" id="total-members">152</p>
+                                <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 12% from last month</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="stat-card-info">
+                                <h3>Monthly Revenue</h3>
+                                <p class="stat-value" id="monthly-revenue">$12,850</p>
+                                <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 8% from last month</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="stat-card-info">
+                                <h3>New Registrations</h3>
+                                <p class="stat-value" id="new-registrations">24</p>
+                                <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 18% from last month</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="stat-card-info">
+                                <h3>Due Payments</h3>
+                                <p class="stat-value" id="due-payments">7</p>
+                                <p class="stat-change negative"><i class="fas fa-arrow-up"></i> 2% from last month</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-grid">
+                        <div class="grid-item chart-container">
+                            <div class="chart-header">
+                                <h3>Member Activity</h3>
+                                <div class="chart-controls">
+                                    <select>
+                                        <option value="weekly">Weekly</option>
+                                        <option value="monthly" selected>Monthly</option>
+                                        <option value="yearly">Yearly</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="chart" id="activity-chart">
+                                <!-- Chart will be rendered here -->
+                                <img src="https://via.placeholder.com/800x300?text=Member+Activity+Chart" alt="Member Activity Chart" style="width: 100%; height: auto;">
+                            </div>
+                        </div>
+                        
+                        <div class="grid-item">
+                            <div class="widget-header">
+                                <h3>Recent Members</h3>
+                                <a href="#members" class="view-all">View All</a>
+                            </div>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Package</th>
+                                        <th>Join Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recent-members-table">
+                                    <tr>
+                                        <td>
+                                            <div class="table-user">
+                                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Member">
+                                                <div>Rahul Kumar</div>
+                                            </div>
+                                        </td>
+                                        <td>Premium</td>
+                                        <td>May 12, 2023</td>
+                                        <td><span class="status active">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-user">
+                                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Member">
+                                                <div>Rishita Kunwar</div>
+                                            </div>
+                                        </td>
+                                        <td>Basic</td>
+                                        <td>May 10, 2023</td>
+                                        <td><span class="status active">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-user">
+                                                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Member">
+                                                <div>Michael Johnson</div>
+                                            </div>
+                                        </td>
+                                        <td>Standard</td>
+                                        <td>May 8, 2023</td>
+                                        <td><span class="status inactive">Inactive</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-user">
+                                                <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Member">
+                                                <div>Karun Dubey</div>
+                                            </div>
+                                        </td>
+                                        <td>Premium</td>
+                                        <td>May 5, 2023</td>
+                                        <td><span class="status active">Active</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Members Section -->
+                <section id="members-section" class="content-section">
+                    <!-- Member management content will go here -->
+                    <div class="section-header">
+                        <h2>Member Management</h2>
+                        <button class="btn primary-btn" id="add-member-btn">
+                            <i class="fas fa-plus"></i> Add New Member
+                        </button>
+                    </div>
+                    
+                    <!-- Member management functionality would go here -->
+                </section>
+                
+                <!-- Other sections for payments, notifications, etc. -->
+            </div>
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - FitHub Gym Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="icon"><i class="fas fa-dumbbell"></i></span>
+                    <h2>FitHub</h2>
+                </div>
+                <span class="mobile-toggle" id="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </div>
+            
+            <div class="sidebar-content">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img id="user-avatar" src="https://via.placeholder.com/100" alt="User Avatar">
+                    </div>
+                    <div class="user-details">
+                        <h3 id="user-name">User Name</h3>
+                        <p>General User</p>
+                    </div>
+                </div>
+                
+                <nav class="sidebar-menu">
+                    <ul>
+                        <li class="active">
+                            <a href="#dashboard" data-section="dashboard">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#profile" data-section="profile">
+                                <i class="fas fa-user"></i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#membership-plans" data-section="membership-plans">
+                                <i class="fas fa-id-card"></i>
+                                <span>Membership Plans</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#schedules" data-section="schedules">
+                                <i class="fas fa-calendar"></i>
+                                <span>Class Schedules</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#trainers" data-section="trainers">
+                                <i class="fas fa-users"></i>
+                                <span>Our Trainers</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#supplements" data-section="supplements">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Supplement Store</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#nutrition-tips" data-section="nutrition-tips">
+                                <i class="fas fa-apple-alt"></i>
+                                <span>Nutrition Tips</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" data-section="contact">
+                                <i class="fas fa-envelope"></i>
+                                <span>Contact Us</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="sidebar-footer">
+                <button id="logout-btn" class="btn logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="header-left">
+                    <button id="menu-toggle" class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="page-title">User Dashboard</h1>
+                </div>
+                
+                <div class="header-right">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">1</span>
+                        <div class="notification-dropdown">
+                            <div class="notification-header">
+                                <h3>Notifications</h3>
+                                <a href="#" class="mark-all-read">Mark all as read</a>
+                            </div>
+                            <ul class="notification-list">
+                                <li class="unread">
+                                    <div class="notification-icon"><i class="fas fa-percent"></i></div>
+                                    <div class="notification-content">
+                                        <p>Special offer: <strong>20% off</strong> on annual memberships this week!</p>
+                                        <span class="notification-time">2 days ago</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="view-all">
+                                <a href="#notifications">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="user-profile">
+                        <img id="header-avatar" src="https://via.placeholder.com/40" alt="User Avatar">
+                        <div class="user-dropdown">
+                            <div class="dropdown-header">
+                                <img src="https://via.placeholder.com/60" alt="User Avatar">
+                                <div>
+                                    <h4 id="dropdown-user-name">User Name</h4>
+                                    <p id="dropdown-user-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fe8b8d9b8cbe9b869f938e929bd09d9193">[email&#160;protected]</a></p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a href="#profile"><i class="fas fa-user"></i> My Profile</a></li>
+                                <li><a href="#"><i class="fas fa-cog"></i> Account Settings</a></li>
+                                <li><a href="#" id="header-logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content-wrapper">
+                <!-- Dashboard Section -->
+                <section id="dashboard-section" class="content-section active">
+                    <div class="welcome-banner">
+                        <div class="welcome-text">
+                            <h2>Welcome, <span id="welcome-name">Aayush</span>!</h2>
+                            <p>Explore our gym offerings and find the perfect fitness plan for you.</p>
+                        </div>
+                        <div class="cta-container">
+                            <button class="btn primary-btn">Become a Member</button>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-banner">
+                        <div class="featured-content">
+                            <h3>Limited Time Offer</h3>
+                            <h2>20% OFF Annual Memberships</h2>
+                            <p>Join now and save big on our premium fitness packages. Offer ends this Sunday!</p>
+                            <button class="btn primary-btn">Learn More</button>
+                        </div>
+                    </div>
+                    
+                    <div class="section-header">
+                        <h2>Featured Services</h2>
+                        <p>Explore what makes FitHub the best choice for your fitness journey.</p>
+                    </div>
+                    
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <h3>State-of-the-Art Equipment</h3>
+                            <p>Access premium fitness equipment for all your workout needs.</p>
+                            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Expert Trainers</h3>
+                            <p>Get guidance from certified fitness professionals.</p>
+                            <a href="#trainers" class="service-link">Meet Our Trainers <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h3>Group Classes</h3>
+                            <p>Join our energizing group sessions for extra motivation.</p>
+                            <a href="#schedules" class="service-link">View Schedule <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3>Health Assessment</h3>
+                            <p>Comprehensive fitness evaluation to track your progress.</p>
+                            <a href="#" class="service-link">Book Assessment <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="section-header">
+                        <h2>Popular Membership Plans</h2>
+                        <a href="#membership-plans" class="view-all">View All Plans</a>
+                    </div>
+                    
+                    <div class="plans-container">
+                        <div class="plan-card">
+                            <div class="plan-badge">Popular</div>
+                            <h3>Basic Plan</h3>
+                            <div class="plan-price">
+                                <span class="price">$49.99</span>
+                                <span class="period">/month</span>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> Access to gym floor</li>
+                                <li><i class="fas fa-check"></i> Basic equipment</li>
+                                <li><i class="fas fa-check"></i> Locker room access</li>
+                                <li><i class="fas fa-times"></i> Personal trainer</li>
+                                <li><i class="fas fa-times"></i> Group classes</li>
+                                <li><i class="fas fa-times"></i> Nutrition consulting</li>
+                            </ul>
+                            <button class="btn primary-btn btn-block">Choose Plan</button>
+                        </div>
+                        <div class="plan-card featured">
+                            <div class="plan-badge">Best Value</div>
+                            <h3>Standard Plan</h3>
+                            <div class="plan-price">
+                                <span class="price">$69.99</span>
+                                <span class="period">/month</span>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> Access to gym floor</li>
+                                <li><i class="fas fa-check"></i> All equipment</li>
+                                <li><i class="fas fa-check"></i> Locker room access</li>
+                                <li><i class="fas fa-check"></i> 2 PT sessions/month</li>
+                                <li><i class="fas fa-check"></i> Limited group classes</li>
+                                <li><i class="fas fa-times"></i> Nutrition consulting</li>
+                            </ul>
+                            <button class="btn primary-btn btn-block">Choose Plan</button>
+                        </div>
+                        <div class="plan-card">
+                            <div class="plan-badge">Premium</div>
+                            <h3>Premium Plan</h3>
+                            <div class="plan-price">
+                                <span class="price">$99.99</span>
+                                <span class="period">/month</span>
+                            </div>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> Access to gym floor</li>
+                                <li><i class="fas fa-check"></i> All equipment</li>
+                                <li><i class="fas fa-check"></i> Premium locker access</li>
+                                <li><i class="fas fa-check"></i> 4 PT sessions/month</li>
+                                <li><i class="fas fa-check"></i> Unlimited group classes</li>
+                                <li><i class="fas fa-check"></i> Nutrition consulting</li>
+                            </ul>
+                            <button class="btn primary-btn btn-block">Choose Plan</button>
+                        </div>
+                    </div>
+                    
+                    <div class="section-header">
+                        <h2>Upcoming Classes</h2>
+                        <a href="#schedules" class="view-all">View Full Schedule</a>
+                    </div>
+                    
+                    <div class="classes-container">
+                        <div class="class-card">
+                            <div class="class-image">
+                                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Yoga Class">
+                                <div class="class-badge">Today</div>
+                            </div>
+                            <div class="class-details">
+                                <h3>Yoga Basics</h3>
+                                <p><i class="fas fa-calendar"></i> Monday, 6:00 PM</p>
+                                <p><i class="fas fa-user"></i> Sarah Johnson</p>
+                                <p><i class="fas fa-clock"></i> 60 minutes</p>
+                                <button class="btn outline-btn btn-block">Learn More</button>
+                            </div>
+                        </div>
+                        <div class="class-card">
+                            <div class="class-image">
+                                <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1331&q=80" alt="Spinning Class">
+                                <div class="class-badge">Tomorrow</div>
+                            </div>
+                            <div class="class-details">
+                                <h3>Spinning</h3>
+                                <p><i class="fas fa-calendar"></i> Tuesday, 7:30 PM</p>
+                                <p><i class="fas fa-user"></i> Mike Thompson</p>
+                                <p><i class="fas fa-clock"></i> 45 minutes</p>
+                                <button class="btn outline-btn btn-block">Learn More</button>
+                            </div>
+                        </div>
+                        <div class="class-card">
+                            <div class="class-image">
+                                <img src="https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="HIIT Workout">
+                            </div>
+                            <div class="class-details">
+                                <h3>HIIT Workout</h3>
+                                <p><i class="fas fa-calendar"></i> Wednesday, 6:30 PM</p>
+                                <p><i class="fas fa-user"></i> David Wilson</p>
+                                <p><i class="fas fa-clock"></i> 30 minutes</p>
+                                <button class="btn outline-btn btn-block">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Other sections would be added here -->
+            </div>
+        </main>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/user.js"></script>
+</body>
+</html>

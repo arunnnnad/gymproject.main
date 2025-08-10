@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - FitHub Gym Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-side-image">
+            <div class="overlay"></div>
+            <div class="content">
+                <h1>FitHub</h1>
+                <p>Join our fitness community today</p>
+            </div>
+        </div>
+        <div class="auth-form-container">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <span class="icon"><i class="fas fa-dumbbell"></i></span>
+                    <h1>FitHub</h1>
+                </a>
+            </div>
+            <h2>Create an Account</h2>
+            <p class="form-description">Create your account to access our gym management platform</p>
+            
+            <div class="alert-container" id="alert-container"></div>
+
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-user"></i></span>
+                        <input type="text" id="full-name" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-phone"></i></span>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="user-type">Register as</label>
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-users"></i></span>
+                        <select id="user-type" name="userType" required>
+                            <option value="">Select user type</option>
+                            <option value="member">Gym Member</option>
+                            <option value="user">General User</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-lock"></i></span>
+                        <input type="password" id="password" name="password" placeholder="Create a password" required>
+                        <span class="toggle-password"><i class="fas fa-eye"></i></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="input-group">
+                        <span class="input-icon"><i class="fas fa-lock"></i></span>
+                        <input type="password" id="confirm-password" name="confirmPassword" placeholder="Confirm your password" required>
+                        <span class="toggle-password"><i class="fas fa-eye"></i></span>
+                    </div>
+                </div>
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                </div>
+                <button type="submit" class="btn primary-btn btn-block">Register</button>
+            </form>
+
+            <div class="auth-divider">
+                <span>Or register with</span>
+            </div>
+
+            <div class="social-login">
+                <button class="btn social-btn google-btn" id="google-register">
+                    <img src="/images/Google.jpg" alt="Google">
+                    Google
+                </button>
+            </div>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitHub - Gym Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="icon"><i class="fas fa-dumbbell"></i></span>
+            <h1>FitHub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cta-buttons">
+            <a href="pages/login.html" class="btn login-btn">Login</a>
+            <a href="pages/register.html" class="btn register-btn">Register</a>
+        </div>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Next-Gen Gym Management System</h1>
+            <p>Sweat today, shine tomorrow.
+Push beyond limits, because strength is built in struggle.
+The pain you feel now will become the power you own forever..</p>
+            <div class="cta-buttons">
+                <a href="pages/register.html" class="btn primary-btn">Get Started</a>
+                <a href="#features" class="btn secondary-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Gym Environment">
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2 class="section-title">Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Member Management</h3>
+                <p>Effortlessly manage members with digital profiles, attendance tracking, and personalized dashboards.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <h3>Digital Payments</h3>
+                <p>Secure online payments, automated billing, and digital receipts for seamless financial management.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h3>Smart Notifications</h3>
+                <p>Automated reminders for payments, special events, and gym schedule changes.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Analytics Dashboard</h3>
+                <p>Comprehensive reports on membership trends, revenue, and facility utilization.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <h3>Nutrition Guidance</h3>
+                <p>Access personalized diet plans and nutritional advice for optimal fitness results.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>Supplement Store</h3>
+                <p>Browse and purchase quality supplements directly through our integrated online store.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="About Our Gym Management System">
+        </div>
+        <div class="about-content">
+            <h2>About FitHub</h2>
+            <p>A gym is a place dedicated to physical fitness, strength training, and overall well-being. It offers equipment, workouts, and guidance to help individuals build muscle, improve stamina, and maintain health. Regular gym sessions enhance discipline, boost energy, reduce stress, and promote a healthier lifestyle both physically and mentally.</p>
+            <ul class="about-features">
+                <li><i class="fas fa-check"></i> Cloud-based secure data storage</li>
+                <li><i class="fas fa-check"></i> Mobile-friendly interface</li>
+                <li><i class="fas fa-check"></i> Customizable membership packages</li>
+                <li><i class="fas fa-check"></i> Detailed reporting and analytics</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>fithub Fitness Avenue, bhopal City, HC 12345</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>+91 (999) 123-XXXX</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ea83848c85aa8c839e829f88c4898587">[email&#160;protected]</a></p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Working Hours</h3>
+                        <p>Mon - Fri: 6:00 AM - 10:00 PM</p>
+                        <p>Sat - Sun: 8:00 AM - 8:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about-section">
+                <div class="logo">
+                    <span class="icon"><i class="fas fa-dumbbell"></i></span>
+                    <h2>FitHub</h2>
+                </div>
+                <p>Revolutionizing gym management with cutting-edge digital solutions for a seamless fitness experience.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="pages/login.html">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact">
+                <h3>Contact Information</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> fithub Fitness Avenue, bhopal City</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89e0e7efe6c9efe0fde1fceba7eae6e4">[email&#160;protected]</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section newsletter">
+                <h3>Subscribe to Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FitHub Gym Management System. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

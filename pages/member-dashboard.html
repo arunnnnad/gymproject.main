@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard - FitHub Gym Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="icon"><i class="fas fa-dumbbell"></i></span>
+                    <h2>FitHub</h2>
+                </div>
+                <span class="mobile-toggle" id="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </div>
+            
+            <div class="sidebar-content">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img id="user-avatar" src="https://via.placeholder.com/100" alt="Member Avatar">
+                    </div>
+                    <div class="user-details">
+                        <h3 id="member-name">Member Name</h3>
+                        <p id="member-plan">Premium Member</p>
+                    </div>
+                </div>
+                
+                <nav class="sidebar-menu">
+                    <ul>
+                        <li class="active">
+                            <a href="#dashboard" data-section="dashboard">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#profile" data-section="profile">
+                                <i class="fas fa-user"></i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#membership" data-section="membership">
+                                <i class="fas fa-id-card"></i>
+                                <span>Membership</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#payments" data-section="payments">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Payments</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#schedules" data-section="schedules">
+                                <i class="fas fa-calendar"></i>
+                                <span>Class Schedules</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#workouts" data-section="workouts">
+                                <i class="fas fa-running"></i>
+                                <span>Workout Plans</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#nutrition" data-section="nutrition">
+                                <i class="fas fa-apple-alt"></i>
+                                <span>Nutrition Plans</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#supplements" data-section="supplements">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Supplement Store</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="sidebar-footer">
+                <button id="logout-btn" class="btn logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="header-left">
+                    <button id="menu-toggle" class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="page-title">Member Dashboard</h1>
+                </div>
+                
+                <div class="header-right">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">2</span>
+                        <div class="notification-dropdown">
+                            <div class="notification-header">
+                                <h3>Notifications</h3>
+                                <a href="#" class="mark-all-read">Mark all as read</a>
+                            </div>
+                            <ul class="notification-list">
+                                <li class="unread">
+                                    <div class="notification-icon"><i class="fas fa-credit-card"></i></div>
+                                    <div class="notification-content">
+                                        <p>Your monthly payment is due in <strong>5 days</strong></p>
+                                        <span class="notification-time">2 days ago</span>
+                                    </div>
+                                </li>
+                                <li class="unread">
+                                    <div class="notification-icon"><i class="fas fa-calendar-check"></i></div>
+                                    <div class="notification-content">
+                                        <p>New <strong>Yoga Class</strong> has been scheduled for tomorrow</p>
+                                        <span class="notification-time">1 day ago</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="view-all">
+                                <a href="#notifications">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="user-profile">
+                        <img id="header-avatar" src="https://via.placeholder.com/40" alt="Member Avatar">
+                        <div class="user-dropdown">
+                            <div class="dropdown-header">
+                                <img src="https://via.placeholder.com/60" alt="Member Avatar">
+                                <div>
+                                    <h4 id="dropdown-member-name">Member Name</h4>
+                                    <p id="dropdown-member-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="deb3bbb3bcbbac9ebba6bfb3aeb2bbf0bdb1b3">[email&#160;protected]</a></p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a href="#profile"><i class="fas fa-user"></i> My Profile</a></li>
+                                <li><a href="#"><i class="fas fa-cog"></i> Account Settings</a></li>
+                                <li><a href="#" id="header-logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content-wrapper">
+                <!-- Dashboard Section -->
+                <section id="dashboard-section" class="content-section active">
+                    <div class="welcome-banner">
+                        <div class="welcome-text">
+                            <h2>Welcome back, <span id="welcome-name">Rahul</span>!</h2>
+                            <p>Here's your fitness overview and important updates.</p>
+                        </div>
+                        <div class="membership-info">
+                            <div class="membership-status">
+                                <p>Membership Status: <span class="status active">Active</span></p>
+                                <p>Valid Until: <span id="valid-until">June 30, 2023</span></p>
+                            </div>
+                            <button class="btn primary-btn">Renew Membership</button>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-cards">
+                        <div class="stat-card">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="stat-card-info">
+                                <h3>Check-ins This Month</h3>
+                                <p class="stat-value">15</p>
+                                <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 3 more than last month</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-stopwatch"></i>
+                            </div>
+                            <div class="stat-card-info">
+                                <h3>Total Workout Time</h3>
+                                <p class="stat-value">24.5 hrs</p>
+                                <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 2.5 hrs more than last month</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="stat-card-info">
+                                <h3>Classes Attended</h3>
+                                <p class="stat-value">8</p>
+                                <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 2 more than last month</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-icon">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="stat-card-info">
+                                <h3>Fitness Score</h3>
+                                <p class="stat-value">78/100</p>
+                                <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 5 points since last month</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-grid">
+                        <div class="grid-item chart-container">
+                            <div class="chart-header">
+                                <h3>Your Fitness Progress</h3>
+                                <div class="chart-controls">
+                                    <select>
+                                        <option value="weekly">Weekly</option>
+                                        <option value="monthly" selected>Monthly</option>
+                                        <option value="yearly">Yearly</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="chart" id="fitness-chart">
+                                <!-- Chart will be rendered here -->
+                                <img src="https://via.placeholder.com/800x300?text=Fitness+Progress+Chart" alt="Fitness Progress Chart" style="width: 100%; height: auto;">
+                            </div>
+                        </div>
+                        
+                        <div class="grid-item">
+                            <div class="widget-header">
+                                <h3>Upcoming Classes</h3>
+                                <a href="#schedules" class="view-all">View All</a>
+                            </div>
+                            <div class="classes-list">
+                                <div class="class-card">
+                                    <div class="class-time">
+                                        <div class="day">Mon</div>
+                                        <div class="date">15</div>
+                                        <div class="time">6:00 PM</div>
+                                    </div>
+                                    <div class="class-details">
+                                        <h4>Yoga Basics</h4>
+                                        <p>Instructor: Aayush Dubey</p>
+                                        <p>Duration: 60 min</p>
+                                    </div>
+                                    <div class="class-actions">
+                                        <button class="btn sm-btn primary-btn">Book</button>
+                                    </div>
+                                </div>
+                                <div class="class-card">
+                                    <div class="class-time">
+                                        <div class="day">Wed</div>
+                                        <div class="date">17</div>
+                                        <div class="time">7:30 PM</div>
+                                    </div>
+                                    <div class="class-details">
+                                        <h4>Spinning</h4>
+                                        <p>Instructor: Kartik kumar</p>
+                                        <p>Duration: 45 min</p>
+                                    </div>
+                                    <div class="class-actions">
+                                        <button class="btn sm-btn primary-btn">Book</button>
+                                    </div>
+                                </div>
+                                <div class="class-card">
+                                    <div class="class-time">
+                                        <div class="day">Thu</div>
+                                        <div class="date">18</div>
+                                        <div class="time">6:30 PM</div>
+                                    </div>
+                                    <div class="class-details">
+                                        <h4>HIIT Workout</h4>
+                                        <p>Instructor: David </p>
+                                        <p>Duration: 30 min</p>
+                                    </div>
+                                    <div class="class-actions">
+                                        <button class="btn sm-btn primary-btn">Book</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid-item">
+                            <div class="widget-header">
+                                <h3>Payment History</h3>
+                                <a href="#payments" class="view-all">View All</a>
+                            </div>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Description</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>May 1, 2023</td>
+                                        <td>Monthly Membership Fee</td>
+                                        <td>$99.99</td>
+                                        <td><span class="status completed">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Apr 1, 2023</td>
+                                        <td>Monthly Membership Fee</td>
+                                        <td>$99.99</td>
+                                        <td><span class="status completed">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mar 1, 2023</td>
+                                        <td>Monthly Membership Fee</td>
+                                        <td>$99.99</td>
+                                        <td><span class="status completed">Paid</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="grid-item">
+                            <div class="widget-header">
+                                <h3>Today's Nutrition Plan</h3>
+                                <a href="#nutrition" class="view-all">View Full Plan</a>
+                            </div>
+                            <div class="nutrition-plan">
+                                <div class="meal">
+                                    <div class="meal-header">
+                                        <h4>Breakfast</h4>
+                                        <span class="meal-time">7:00 AM</span>
+                                    </div>
+                                    <ul class="meal-items">
+                                        <li>Oatmeal with berries (300 kcal)</li>
+                                        <li>Greek yogurt (150 kcal)</li>
+                                        <li>1 banana (105 kcal)</li>
+                                    </ul>
+                                    <div class="meal-macros">
+                                        <span>Protein: 25g</span>
+                                        <span>Carbs: 65g</span>
+                                        <span>Fat: 10g</span>
+                                    </div>
+                                </div>
+                                <div class="meal">
+                                    <div class="meal-header">
+                                        <h4>Lunch</h4>
+                                        <span class="meal-time">12:30 PM</span>
+                                    </div>
+                                    <ul class="meal-items">
+                                        <li>Grilled chicken breast (200 kcal)</li>
+                                        <li>Brown rice (150 kcal)</li>
+                                        <li>Mixed vegetables (100 kcal)</li>
+                                    </ul>
+                                    <div class="meal-macros">
+                                        <span>Protein: 35g</span>
+                                        <span>Carbs: 45g</span>
+                                        <span>Fat: 8g</span>
+                                    </div>
+                                </div>
+                                <div class="meal">
+                                    <div class="meal-header">
+                                        <h4>Dinner</h4>
+                                        <span class="meal-time">7:00 PM</span>
+                                    </div>
+                                    <ul class="meal-items">
+                                        <li>Salmon fillet (250 kcal)</li>
+                                        <li>Quinoa (120 kcal)</li>
+                                        <li>Roasted vegetables (130 kcal)</li>
+                                    </ul>
+                                    <div class="meal-macros">
+                                        <span>Protein: 30g</span>
+                                        <span>Carbs: 35g</span>
+                                        <span>Fat: 15g</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Other sections would be added here -->
+            </div>
+        </main>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/member.js"></script>
+</body>
+</html>
